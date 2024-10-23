@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="is">
+
+<head>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
+  <meta charset="utf-8">
+  <title>Verkefni 8: Strengjagreinir</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="scripts.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Strengjagreinir</h1>
+    <p>Til að greina streng, skrifaðu eða límdu inn í textareitinn og keyrðu <code>Greining</code> eða
+      <code>Hreinsa</code> til að hreinsa texta og niðurstöður.</p>
+
+    <form action="." method="get" class="string-form">
+      <label for="string">Strengur:</label>
+      <textarea id="string" name="string" rows="4" cols="50"></textarea>
+      <div class="buttons">
+        <button type="submit">Greining</button>
+        <button type="reset">Hreinsa</button>
+      </div>
+      <!--
+        Þetta er sjálfgefið falið með CSS þar til JavaScript kóði keyrir greiningu.
+        Hægt er að sjá hvernig dæmi um greiningu geti litið út með því að fjarlægja `.hidden`
+        og sýna dæmin sem eru skilgreind hér að neðan.
+        JavaScript kóðir fjarlægir dæmin sem eru skilgreind hér að neðan þegar greining er keyrð.
+        -->
+      <div class="output hidden">
+        <p>Fyrir gefinn streng:</p>
+        <code class="wide"><pre class="input">Halló hæ heimur!</pre></code>
+        <p>Er niðurstaða greiningar:</p>
+        <ul>
+          <li>Lengsta orðið er: <code class="longest">heimur!</code>.</li>
+          <li>Stysta orðið er: <code class="shortest">hæ</code>.</li>
+          <li>Fjöldi sérhljóða er: <code class="vowels">6</code>.</li>
+          <li>Fjöldi samhljóða er: <code class="consonants">7</code>.</li>
+          <li>Strengurinn er <span class="palindrome">ekki</span> samhverfur.</li>
+        </ul>
+        <p>Viðsnúinn er strengurinn:</p>
+        <code class="wide"><pre class="reversed">!rumieh æh óllaH</pre></code>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
